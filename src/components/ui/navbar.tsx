@@ -18,8 +18,8 @@ export default function Navbar() {
       <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
 
       {/* ================= Navbar ================= */}
-      <div className="drawer-content">
-        <header className="navbar bg-primaryBg px-6 lg:px-10 border-b text-primaryText">
+      <div className="drawer-content bg-primaryBg px-6 lg:px-10 shadow text-primaryText">
+        <header className="navbar max-w-[1440px] mx-auto">
 
           {/* -------- Left: Logo -------- */}
           <div className="navbar-start">
