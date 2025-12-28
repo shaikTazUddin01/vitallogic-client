@@ -7,7 +7,7 @@ import logo from "@/src/assets/icon/logo.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--primary-bg)] text-[var(--primary-text)] border-t border-[var(--border)]">
+    <footer className="bg-primaryBg text-primaryText border-t border-[var(--border)]">
       
       {/* ================= Top Section ================= */}
       <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">

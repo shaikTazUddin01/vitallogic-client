@@ -18,7 +18,7 @@ export default function Navbar() {
       <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
 
       {/* ================= Navbar ================= */}
-      <div className="drawer-content bg-primaryBg px-6 lg:px-10 shadow text-primaryText">
+      <div className="drawer-content px-6 lg:px-10 shadow bg-primaryBg text-primaryText">
         <header className="navbar max-w-[1440px] mx-auto">
 
           {/* -------- Left: Logo -------- */}
@@ -94,36 +94,48 @@ export default function Navbar() {
       </div>
 
       {/* ================= Drawer (Mobile) ================= */}
-      <div className="drawer-side">
-        <label htmlFor="nav-drawer" className="drawer-overlay"></label>
+    {/* ================= Drawer (Mobile) ================= */}
+<div className="drawer-side">
+  <label htmlFor="nav-drawer" className="drawer-overlay"></label>
 
-        <aside className="w-72 min-h-full bg-base-100 p-6">
-          {/* Logo */}
-          <Link href="/" className="mb-6 flex items-center">
-            <Image src={logo} alt="VitalLogic" className="h-12 w-auto" />
-          </Link>
+  <aside className="w-72 min-h-full bg-base-100 p-6 relative">
 
-          {/* Menu */}
-          <ul className="menu gap-2 font-medium">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
-              </li>
-            ))}
-          </ul>
+    {/* ---- Close Button ---- */}
+    <label
+      htmlFor="nav-drawer"
+      className="absolute right-4 top-4 btn btn-sm btn-circle btn-ghost"
+      aria-label="Close menu"
+    >
+      ✕
+    </label>
 
-          {/* Call Info (Mobile) */}
-          <div className="mt-6 flex items-center gap-3 border-t pt-4">
-            <div className="p-2 rounded-full bg-warning/10 text-warning">
-              <FiPhoneCall size={18} />
-            </div>
-            <div className="text-sm">
-              <p className="text-gray-500">Call Now</p>
-              <p className="font-semibold">+4569-125-478</p>
-            </div>
-          </div>
-        </aside>
+    {/* Logo */}
+    <Link href="/" className="mb-6 flex items-center">
+      <Image src={logo} alt="VitalLogic" className="h-12 w-auto" />
+    </Link>
+
+    {/* Menu */}
+    <ul className="menu gap-2 font-medium">
+      {navItems.map((item) => (
+        <li key={item.href}>
+          <Link href={item.href}>{item.label}</Link>
+        </li>
+      ))}
+    </ul>
+
+    {/* Call Info (Mobile) */}
+    <div className="mt-6 flex items-center gap-3 border-t pt-4">
+      <div className="p-2 rounded-full bg-warning/10 text-warning">
+        <FiPhoneCall size={18} />
       </div>
+      <div className="text-sm">
+        <p className="text-gray-500">Call Now</p>
+        <p className="font-semibold">+4569-125-478</p>
+      </div>
+    </div>
+  </aside>
+</div>
+
     </div>
   );
 }
