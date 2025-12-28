@@ -2,20 +2,20 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                bg: "var(--bg)",
+                primaryBg: "var(--primary-bg)",
                 surface: "var(--surface)",
                 border: "var(--border)",
 
-                primary: "var(--primary)",
-                "primary-text": "var(--primary-text)",
+              
 
                 accent: "var(--accent)",
 
                 text: {
-                    primary: "var(--text-primary)",
-                    secondary: "var(--text-secondary)",
+                    primaryText: "var(--primary-text)",
+                    secondaryText: "var(--secondary-text)",
                 },
             },
         },
     },
+     plugins: [require("daisyui")],
 };
